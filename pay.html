@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+
+<script>
+
+    $(function () {
+        var eleScript= document.createElement("script");
+        eleScript.type = "text/javascript";
+        eleScript.src = "https://baoyanmall.cn:8443/pay/paySign";
+        var src = document.getElementsByTagName("HEAD")[0].appendChild(eleScript);
+
+        var jsonstr = {
+            "indentOddnumbers": "112018062316200517400544",
+            "isVoucher": "0",
+            "indentId": 136033,
+            "userkey": "8BA8FAE3BCCF587C5C728E70C58EAE298B19B9E22D0AE5BA0624B8DD6F275DA579292364BD9A4839BACCC2AD3685B52FF2AD204D1255AE1C5ED5E6E566D49DBA97E17BA503D15060074CFE10CE538259702C5FB2025DE1FC60289C483B397E6BEEC5DD5F18723FD0119031773471728CAAFDE4F5D066CD6FB1D4FAEBF6A7CBD6E7CC002334F36F72F75E433692388F94A1BA9E",
+            "indentKey": "145657AC2BDFA97EA5A645988948E9C3767814B55082F3732B391EA205DF8E711C3D17D872B50079F8105E8C50A091F11BCF42C23E4D690AD34DFADEF28A6DAABD8DB6AB17057DBE208469C7DABA87EF1D582A40B638F24BA13E23FA6EB8DBEFF90BDD867652A0A7683E020281F7743DDB84045E193014DF8497FE650FEE1B",
+            "voucherTilte": "",
+            "receiveMoneyEndTime": "今天 17:45:00",
+            "receiveMoneyStartTime": "今天 17:15:00",
+            "userId": "134",
+            "remark": "",
+            "acessToken": "9346C5F72A53D5202C19AA19974316F9A477D4419AFE854BF9BE7549698F44312966FCDC1D72314CF3AB21EFCEC85159A95BA4A3FDA65FFC0BBF85C4916726AFC28C1628C55DCB7F5EF0313F26AB8879D4BD488106CCF6D6BBA83538B3B2586A3212C0B0A61B4EE5CB1B1F9EB68095EC11886EFC67D0B8BBE36DEEEA48CC1B82A624564A8E983564C481DCDD685CC6",
+            "taxNumber": "",
+            "businessId": "1"
+        };
+
+        // var type = "1";
+        // var jsonStr1 = "'" + jsonstr + "'";
+        // var jsons = eval(jsonstr);
+        $.ajax({
+            url: src,
+            data:{
+                jsons:jsonstr,
+                type:1
+            },
+            dataType:"jsonp",
+            jsonp: "cb",
+            async:false,
+            type:"post",
+            success: function (e) {
+                console.log("成功"+e);
+            },
+            error:function (e) {
+                console.log(e)
+            }
+        });
+    })
+
+
+</script>
+</body>
+</html>

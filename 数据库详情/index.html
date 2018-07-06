@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据库详情</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container .header{
+            width: 100%;
+            height: 140px;
+            background: url("img/banner02.jpg") no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+        }
+        #container .header .title{
+            width: 90%;
+            height: auto;
+            position: absolute;
+            bottom: 12px;
+            left: 10px;
+        }
+
+        #container .header .title p{
+            color: #fff;
+        }
+
+        #container .header .title p:nth-child(1){
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /*分享*/
+        #container .header .share{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        /*介绍*/
+        #container .info{
+            width: 100%;
+            height: auto;
+            border-bottom:10px solid #e6e6e6;
+
+        }
+
+
+        #container .introduce{
+            width: 90%;
+            height: auto;
+            margin: 10px auto;
+        }
+
+        #container .introduce p:nth-child(1){
+            height:50px;
+            font-size:16px;
+            font-weight:bold;
+            line-height:50px;
+        }
+
+        #container .introduce p:nth-child(2){
+            font-size:14px;
+        }
+
+        #container .introduce .details{
+            width: 100%;
+            height: 80px;
+            margin-top: 10px;
+        }
+
+        #container .introduce .details .goumai{
+            width: 48%;
+            height: 70px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #container .introduce .details .goumai p{
+            height: 20px;
+            display: block;
+        }
+        #container .introduce .details .shuxian{
+            width: 1%;
+            float: left;
+            text-align: center;
+            font-size: 20px;
+            line-height: 70px;
+        }
+
+        #container .introduce .details .keshi{
+            width: 48%;
+            height: 70px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #container .introduce .details .keshi p{
+            height: 20px;
+            display: block;
+        }
+
+        /*相关内容*/
+        #container .correlationContent{
+            width: 100%;
+            height:auto;
+            margin: 10px auto;
+        }
+
+        #container .correlationContent .c-title{
+            width: 90%;
+            height: 50px;
+            margin: 0 auto;
+            line-height: 50px;
+        }
+
+        #container .correlationContent .c-title span:nth-child(1){
+            float: left;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        #container .correlationContent .c-title span:nth-child(2){
+            float: right;
+            font-size:14px;
+        }
+
+        #container .correlationContent .c-jieshao{
+            width: 90%;
+            height: 114px;
+            margin: 0 auto;
+        }
+
+        #container .correlationContent .c-jieshao .c-pic{
+            width: 30%;
+            float: left;
+        }
+
+        #container .correlationContent .c-jieshao .c-content{
+            width: 65%;
+            float: right;
+            position: relative;
+        }
+
+        #container .correlationContent .c-jieshao .c-content p{
+            margin: 0 0 6px 0;
+        }
+
+        #container .correlationContent .c-jieshao .c-content p:nth-child(1){
+            font-size:16px;
+            font-weight:bold;
+        }
+
+        #container .correlationContent .c-jieshao .c-content p:nth-child(2){
+            font-size:13px;
+            color:#808080;
+        }
+
+        #container .correlationContent .c-jieshao .c-content p:nth-child(3){
+            font-size: 12px;
+            color: #808080;
+        }
+
+        #container .correlationContent .c-jieshao .c-content p:nth-child(4){
+            font-size:13px;
+            color:#4c4c4c;
+            margin-bottom:0;
+        }
+
+        #container .correlationContent .c-jieshao .c-content .jiage{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #container .correlationContent .c-jieshao .c-content .jiage span{
+            color:#ff6b00;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="header">
+        <div class="title">
+            <p>华彬讲透孙子兵法-30讲</p>
+        </div>
+        <!--<div class="share">-->
+            <!--<img src="img/shangchuan.png" alt="分享" width="30" height="30">-->
+        <!--</div>-->
+    </div>
+
+    <!--介绍-->
+    <div class="info">
+        <div class="introduce">
+            <p>陈凯-国际卷商交易团队负责人</p>
+            <p>参与A股时长20年的证券老兵，目前是一家中资国际券商的高级顾问和交易涂端负责人</p>
+            <div class="details">
+                <div class="goumai">
+                    <p>10000</p>
+                    <p style="font-size: 12px;">已购买 ></p>
+                </div>
+                <div class="shuxian">|</div>
+                <div class="keshi">
+                    <p>6</p>
+                    <p style="font-size: 12px;">课时</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--相关内容-->
+    <div class="correlationContent">
+        <div class="block">
+            <div class="c-title">
+                <span>相关内容</span>
+                <span>查看全部</span>
+            </div>
+            <div class="c-jieshao">
+                <div class="c-pic">
+                    <img src="img/report1.jpg" alt="" width="100%" height="100">
+                </div>
+                <div class="c-content">
+                    <p>华彬讲透孙子兵法...</p>
+                    <p>华彬  浙江大学与华营咨询...</p>
+                    <p>时长: 1小时9分 / 6节课</p>
+                    <p>1000人购买</p>
+                    <div class="jiage">
+                        <span>99$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="c-jieshao">
+                <div class="c-pic">
+                    <img src="img/report1.jpg" alt="" width="100%" height="100">
+                </div>
+                <div class="c-content">
+                    <p>华彬讲透孙子兵法...</p>
+                    <p>华彬  浙江大学与华营咨询...</p>
+                    <p>时长: 1小时9分 / 6节课</p>
+                    <p>1000人购买</p>
+                    <div class="jiage">
+                        <span>99$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="c-jieshao">
+                <div class="c-pic">
+                    <img src="img/report1.jpg" alt="" width="100%" height="100">
+                </div>
+                <div class="c-content">
+                    <p>华彬讲透孙子兵法...</p>
+                    <p>华彬  浙江大学与华营咨询...</p>
+                    <p>时长: 1小时9分 / 6节课</p>
+                    <p>1000人购买</p>
+                    <div class="jiage">
+                        <span>99$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
